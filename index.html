@@ -4,13 +4,47 @@
   <meta charset="utf-8">
   <!--   <title>Links</title> -->
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    .link { display: block; margin: 10px 0 10px 40px; color: #1155cc; text-decoration: underline; }
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 40px; 
+    }
+    .link { 
+      display: block; 
+      margin: 10px 0 10px 40px; 
+      color: #1155cc; 
+      text-decoration: underline; 
+    }
+    .zelle-tooltip {
+      cursor: pointer;
+    }
+    .zelle-tooltip .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      left: 110%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #111;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      white-space: nowrap;
+      transition: opacity 0.2s ease;
+      z-index: 10;
+    }
+    .zelle-tooltip:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
-  <a class="link" href="https://docs.google.com/document/d/1LBRCmkwZklEg_mPHCC-Y89w82SU9IalU5WwnBO_eUkk/preview" target="_blank">life day</a>
-  <a class="link" href="https://docs.google.com/spreadsheets/d/1iZJqNayHZwF3TR_4yrF9PIipzV3hAxcu-a8vFSgIj5E/preview" target="_blank">peace</a>
-  <a class="link" href="https://docs.google.com/document/d/1y8NkPjR9Dgk8TPdlPDmlCv_JNhCefsRq1rLbR2Bo_Kw/preview" target="_blank">list bucket</a>
+  <a class="link" href="https://gofund.me/d159433a9" target="_blank">GoFundMe</a>
+  <a class="link" href="https://venmo.com/u/Cameron-Hirsh" target="_blank">Venmo</a>
+  <a class="link zelle-tooltip" href="#" onclick="return false;">
+    Zelle
+    <span class="tooltip">camjhirsh@gmail.com</span>
+  </a>
 </body>
 </html>
